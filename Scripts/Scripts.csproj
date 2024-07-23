@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>	
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<RootNamespace>Server</RootNamespace>
+		<AssemblyName>Scripts</AssemblyName>
+		<DefineConstants>NEWTIMERS;NEWPARENT;UOAVOS</DefineConstants>
+		<EnableDefaultItems>true</EnableDefaultItems>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<!-- Assembly Info -->
+	<PropertyGroup>
+		<Authors>isoRealms</Authors>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Copyright>© 2024</Copyright>
+		<Product>Game Server Software</Product>
+		<Company>isoRealms</Company>
+		<Version>1.0.0.0</Version>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="System.Data.Odbc" Version="8.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\Server\Server.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+	
+</Project>

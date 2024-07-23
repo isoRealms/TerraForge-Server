@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<RootNamespace>Server</RootNamespace>
+		<AssemblyName>Server</AssemblyName>
+		<DefineConstants>NEWTIMERS;NEWPARENT;UOAVO</DefineConstants>
+		<EnableDefaultItems>true</EnableDefaultItems>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<!-- Exe Specific -->
+	<PropertyGroup>
+		<OutputPath>..\</OutputPath>
+		<StartupObject>Server.Core</StartupObject>
+		<ApplicationIcon>Server.ico</ApplicationIcon>
+		<NoWin32Manifest>true</NoWin32Manifest>
+		<ServerGarbageCollection>true</ServerGarbageCollection>
+		<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+	</PropertyGroup>
+
+	<!-- Assembly Info -->
+	<PropertyGroup>
+		<Authors>isoRealms</Authors>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Copyright>© 2024</Copyright>
+		<Product>Game Server Software</Product>
+		<Company>isoRealms</Company>
+		<Version>1.0.0.0</Version>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+	  <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="8.0.0" />
+	</ItemGroup>
+	
+</Project>
